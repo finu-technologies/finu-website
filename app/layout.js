@@ -2,12 +2,12 @@ import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 
 export const metadata = {
-  title: 'FinU Technologies — Infrastructure for Smarter Digital Payments',
-  description: 'FinU Technologies is an Indian fintech infrastructure company building API-first software that improves how money moves through digital commerce.',
+  title: 'FinU Technologies — The Missing Layer in Online Checkout',
+  description: 'FinU Technologies is building split payment checkout infrastructure for India, enabling customers to complete a single online purchase using multiple payment methods while merchants continue using their existing payment stack.',
   keywords: ['fintech infrastructure', 'split payment', 'payment orchestration', 'India fintech', 'checkout infrastructure', 'FinU'],
   openGraph: {
-    title: 'FinU Technologies — Infrastructure for Smarter Digital Payments',
-    description: 'API-first payment infrastructure for digital commerce.',
+    title: 'FinU Technologies — The Missing Layer in Online Checkout',
+    description: 'Split payment checkout infrastructure for India.',
     type: 'website',
   },
 }

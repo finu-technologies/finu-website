@@ -20,7 +20,6 @@ function Nav() {
   const links = [
     { href: '#about', label: 'About' },
     { href: '#product', label: 'Product' },
-    { href: '#why', label: 'Why FinU' },
     { href: '#vision', label: 'Vision' },
     { href: '#contact', label: 'Contact' },
   ]
@@ -90,13 +89,6 @@ function Hero() {
                 </Button>
               </a>
             </div>
-            <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-widest text-slate-500">
-              <span>Built for Merchants</span>
-              <span className="w-1 h-1 rounded-full bg-slate-600" />
-              <span>Payment Partners</span>
-              <span className="w-1 h-1 rounded-full bg-slate-600" />
-              <span>Enterprise Commerce</span>
-            </div>
           </div>
 
           <div className="relative float-anim">
@@ -118,7 +110,7 @@ function HeroIllustration() {
             <div className="w-2 h-2 rounded-full bg-amber-500/60" />
             <div className="w-2 h-2 rounded-full bg-emerald-500/60" />
           </div>
-          <span className="text-[10px] font-mono text-slate-500">checkout.finu.io</span>
+          <span className="text-[10px] font-mono text-slate-500">checkout.finutechnologies.com</span>
         </div>
 
         <div className="space-y-3">
@@ -244,13 +236,15 @@ function FlowDiagram() {
 
         <div className="md:col-span-3 flex flex-col gap-3">
           <div className="text-center text-[10px] uppercase tracking-widest text-slate-500 font-semibold">FinU Orchestration Layer</div>
-          <div className="grid grid-cols-3 gap-3">
-            <MethodBadge icon={<CreditCard className="w-4 h-4" />} label="Card" />
-            <MethodBadge icon={<Smartphone className="w-4 h-4" />} label="UPI" />
-            <MethodBadge icon={<Building2 className="w-4 h-4" />} label="Bank" />
+          <div className="flex items-stretch gap-2">
+            <MethodBadge icon={<CreditCard className="w-4 h-4" />} label="Card" step="1" />
+            <SeqConnector />
+            <MethodBadge icon={<Smartphone className="w-4 h-4" />} label="UPI" step="2" />
+            <SeqConnector />
+            <MethodBadge icon={<Building2 className="w-4 h-4" />} label="Net Banking" step="3" />
           </div>
           <div className="h-px shimmer-border" />
-          <div className="text-center text-[10px] text-slate-500">One transaction · Multiple rails · Single confirmation</div>
+          <div className="text-center text-[11px] text-slate-500">Sequential processing. Single merchant confirmation.</div>
         </div>
 
         <FlowNode label="Merchant" sub="receives full settlement" primary />
@@ -268,11 +262,38 @@ function FlowNode({ label, sub, primary }) {
   )
 }
 
-function MethodBadge({ icon, label }) {
+function MethodBadge({ icon, label, step }) {
   return (
-    <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 flex flex-col items-center gap-1 text-amber-900">
+    <div className="relative flex-1 p-3 rounded-xl bg-amber-50 border border-amber-200 flex flex-col items-center gap-1 text-amber-900">
+      {step && (
+        <span className="absolute top-1.5 right-2 text-[9px] font-mono text-amber-700/70">0{step}</span>
+      )}
       {icon}
       <span className="text-xs font-semibold">{label}</span>
+    </div>
+  )
+}
+
+function SeqConnector() {
+  return (
+    <div className="flex items-center justify-center px-0.5" aria-hidden="true">
+      <svg width="22" height="10" viewBox="0 0 22 10" fill="none">
+        <path
+          d="M1 5 H16"
+          stroke="#D4AF37"
+          strokeWidth="1.25"
+          strokeDasharray="2 2.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M15 1.5 L20 5 L15 8.5"
+          stroke="#D4AF37"
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+      </svg>
     </div>
   )
 }
@@ -459,7 +480,7 @@ function Footer() {
           <div className="md:col-span-2">
             <FinULogo variant="light" />
             <p className="mt-5 text-sm text-slate-400 max-w-sm leading-relaxed">
-              FinU Technologies Private Limited — building payment infrastructure for digital commerce.
+              Payment infrastructure for India's digital commerce.
             </p>
             <div className="mt-6 space-y-2 text-sm">
               <div className="flex items-start gap-2">
@@ -502,7 +523,6 @@ export default function Page() {
       <Hero />
       <About />
       <Product />
-      <WhyFinU />
       <DesignedFor />
       <Vision />
       <Contact />
