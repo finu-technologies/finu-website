@@ -7,12 +7,12 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { toast } from 'sonner'
 import FinULogo from '@/components/FinULogo'
 import {
-  ArrowRight, CheckCircle2, Zap, Shield, Layers, TrendingUp,
-  Menu, X, MapPin, Mail, Sparkles, CreditCard, Smartphone, Building2, ArrowDown
+  ArrowRight, Zap, Shield, Layers, TrendingUp,
+  Menu, X, MapPin, Mail, CreditCard, Smartphone, Building2,
+  Store, Landmark, Network, Briefcase, CheckCircle2
 } from 'lucide-react'
 
 function Nav() {
@@ -73,13 +73,10 @@ function Hero() {
               <span className="text-xs font-medium text-amber-300 tracking-wide">PRODUCT UNDER DEVELOPMENT</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
-              Building Infrastructure for <span className="gold-gradient">Smarter Digital Payments</span>
+              The Missing Layer in <span className="gold-gradient">Online Checkout</span>
             </h1>
             <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
-              FinU Technologies is an Indian fintech infrastructure company building software that improves how money moves through digital commerce.
-            </p>
-            <p className="mt-4 text-base text-slate-400 leading-relaxed max-w-xl">
-              Our first product, currently under development, enables customers to complete a single online purchase using multiple payment methods through one seamless checkout.
+              FinU Technologies is building split payment checkout infrastructure for India, enabling customers to complete a single online purchase using multiple payment methods while merchants continue using their existing payment stack.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <a href="#product">
@@ -145,17 +142,6 @@ function HeroIllustration() {
           </div>
         </div>
       </div>
-
-      <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl border border-amber-500/30 bg-slate-900/80 backdrop-blur p-3 shadow-xl rotate-6">
-        <div className="text-[9px] text-slate-500 uppercase tracking-wider">Success Rate</div>
-        <div className="text-2xl font-bold gold-gradient mt-1">+18%</div>
-        <div className="text-[9px] text-slate-500">projected</div>
-      </div>
-      <div className="absolute -bottom-6 -left-6 w-28 h-20 rounded-2xl border border-slate-700 bg-slate-900/80 backdrop-blur p-3 shadow-xl -rotate-3">
-        <div className="text-[9px] text-slate-500 uppercase tracking-wider">Latency</div>
-        <div className="text-lg font-bold text-white mt-1">&lt;120ms</div>
-        <div className="text-[9px] text-emerald-400">● API online</div>
-      </div>
     </div>
   )
 }
@@ -175,78 +161,21 @@ function PayMethod({ icon, label, amount, pct }) {
   )
 }
 
-function TrustBar() {
-  return (
-    <section className="border-y border-slate-200 bg-slate-50/50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8">
-        <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500 text-center mb-6 font-medium">Built to integrate with India's payment ecosystem</p>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-slate-400">
-          {['Razorpay', 'Cashfree', 'Juspay', 'PayU', 'BillDesk', 'UPI'].map(p => (
-            <span key={p} className="text-lg font-semibold tracking-tight opacity-70 hover:opacity-100 transition">{p}</span>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 mb-6">
-            <span className="text-xs font-semibold text-amber-800 tracking-wide">WHO WE ARE</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
-            Payment infrastructure that adapts to how customers manage money.
-          </h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            FinU Technologies builds <span className="font-semibold text-slate-900">API-first payment infrastructure</span> for digital commerce.
-          </p>
-          <p className="mt-4 text-base text-slate-600 leading-relaxed">
-            Our mission is to simplify online payments through intelligent orchestration technology that integrates with existing payment ecosystems. We believe payment infrastructure should adapt to how customers manage money — not force them into rigid checkout flows.
-          </p>
-          <div className="mt-8 grid grid-cols-2 gap-4">
-            <StatBlock label="Approach" value="API-first" />
-            <StatBlock label="Focus" value="Orchestration" />
-            <StatBlock label="Market" value="India" />
-            <StatBlock label="Segment" value="B2B Fintech" />
-          </div>
+    <section id="about" className="py-24 lg:py-28 bg-white">
+      <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 mb-6">
+          <span className="text-xs font-semibold text-amber-800 tracking-wide">ABOUT FINU</span>
         </div>
-
-        <div className="relative">
-          <div className="absolute inset-0 dot-pattern opacity-70" />
-          <div className="relative grid grid-cols-2 gap-4">
-            <MiniCard title="Merchants" desc="Accept more payments, reduce failures." icon={<Building2 />} />
-            <MiniCard title="Gateways" desc="Complement existing partnerships." icon={<Layers />} accent />
-            <MiniCard title="Customers" desc="Pay across multiple methods, once." icon={<Smartphone />} accent />
-            <MiniCard title="Enterprises" desc="Secure, scalable infrastructure." icon={<Shield />} />
-          </div>
-        </div>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+          An Indian fintech infrastructure company.
+        </h2>
+        <p className="mt-8 text-lg text-slate-600 leading-relaxed">
+          FinU Technologies Private Limited builds API-first payment orchestration software designed to sit alongside existing gateways and checkout systems, giving digital commerce a more flexible foundation.
+        </p>
       </div>
     </section>
-  )
-}
-
-function StatBlock({ label, value }) {
-  return (
-    <div className="p-4 rounded-xl border border-slate-200 bg-slate-50">
-      <div className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">{label}</div>
-      <div className="text-lg font-bold text-slate-900 mt-1">{value}</div>
-    </div>
-  )
-}
-
-function MiniCard({ title, desc, icon, accent }) {
-  return (
-    <div className={`p-5 rounded-2xl border ${accent ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200'} shadow-sm`}>
-      <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-3 ${accent ? 'bg-amber-500/20 text-amber-400' : 'bg-amber-50 text-amber-700'}`}>
-        {icon}
-      </div>
-      <div className={`font-semibold ${accent ? 'text-white' : 'text-slate-900'}`}>{title}</div>
-      <div className={`text-xs mt-1 ${accent ? 'text-slate-400' : 'text-slate-500'}`}>{desc}</div>
-    </div>
   )
 }
 
@@ -255,32 +184,61 @@ function Product() {
     <section id="product" className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-30" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 mb-6">
-            <Sparkles className="w-3 h-3 text-amber-400" />
-            <span className="text-xs font-semibold text-amber-400 tracking-wide">OUR FLAGSHIP PRODUCT</span>
+            <span className="text-xs font-semibold text-amber-400 tracking-wide">FLAGSHIP PRODUCT</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
             Split Payment Checkout <span className="gold-gradient">Infrastructure</span>
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            Enable customers to complete one online purchase using multiple payment methods such as Card + UPI, two cards, or other supported combinations. Built to integrate with merchants' existing payment gateways and checkout systems.
+            Enable customers to complete a single online purchase using multiple payment methods such as Card + UPI, two cards, or other supported combinations — with merchants receiving one unified confirmation.
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-300 bg-amber-50">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 glow-pulse" />
-            <span className="text-xs font-semibold text-amber-800">Currently Under Development</span>
-          </div>
         </div>
 
         <FlowDiagram />
+
+        <div className="grid md:grid-cols-3 gap-5 mt-10">
+          <FeatureCard
+            icon={<Layers className="w-5 h-5" />}
+            title="Multiple Payment Methods"
+            desc="Combine card, UPI, net banking and other supported methods in a single checkout flow."
+          />
+          <FeatureCard
+            icon={<CheckCircle2 className="w-5 h-5" />}
+            title="Unified Merchant Confirmation"
+            desc="One transaction result, one settlement view — regardless of how the customer paid."
+          />
+          <FeatureCard
+            icon={<Zap className="w-5 h-5" />}
+            title="API-First Integration"
+            desc="Sits alongside existing gateways and checkout systems, without replacing them."
+          />
+        </div>
+
+        <p className="mt-10 text-center text-sm text-slate-500 max-w-2xl mx-auto">
+          Designed to integrate with modern payment gateways and merchant checkout systems.
+        </p>
       </div>
     </section>
   )
 }
 
+function FeatureCard({ icon, title, desc }) {
+  return (
+    <div className="bg-white rounded-2xl border border-slate-200 p-6 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-100/40 transition-all">
+      <div className="w-11 h-11 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-5">
+        {icon}
+      </div>
+      <h3 className="font-semibold text-slate-900">{title}</h3>
+      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{desc}</p>
+    </div>
+  )
+}
+
 function FlowDiagram() {
   return (
-    <div className="mt-8 bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-lg shadow-slate-900/5">
+    <div className="bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-lg shadow-slate-900/5">
       <div className="grid md:grid-cols-5 gap-6 items-center">
         <FlowNode label="Customer" sub="initiates checkout" primary />
 
@@ -296,12 +254,6 @@ function FlowDiagram() {
         </div>
 
         <FlowNode label="Merchant" sub="receives full settlement" primary />
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-4 mt-10 pt-8 border-t border-slate-200">
-        <IntegrationPoint step="01" title="Drop-in SDK" desc="Add split checkout to existing flows in minutes." />
-        <IntegrationPoint step="02" title="Gateway Agnostic" desc="Works alongside your current payment partners." />
-        <IntegrationPoint step="03" title="Reconciliation" desc="Unified settlement and reporting across methods." />
       </div>
     </div>
   )
@@ -325,27 +277,17 @@ function MethodBadge({ icon, label }) {
   )
 }
 
-function IntegrationPoint({ step, title, desc }) {
-  return (
-    <div>
-      <div className="text-xs font-mono text-amber-600">{step}</div>
-      <div className="mt-1 font-semibold text-slate-900">{title}</div>
-      <div className="text-sm text-slate-600 mt-1">{desc}</div>
-    </div>
-  )
-}
-
 function WhyFinU() {
   const features = [
-    { icon: TrendingUp, title: 'Better Checkout Conversion', desc: 'Recover transactions that would otherwise fail due to insufficient balance, credit limits, or single-method restrictions.' },
-    { icon: Layers, title: 'Flexible Customer Experience', desc: 'Combine funds across multiple payment methods in a single, seamless checkout flow.' },
-    { icon: Zap, title: 'API-First Infrastructure', desc: 'Integrates cleanly with existing payment gateways, PSPs, and checkout systems used by merchants today.' },
-    { icon: Shield, title: 'Secure & Scalable', desc: 'Enterprise-grade payment orchestration designed for high-volume digital commerce.' },
+    { icon: TrendingUp, title: 'Better Checkout Conversion', desc: 'Recover transactions that would otherwise fail due to single-method restrictions.' },
+    { icon: Layers, title: 'Flexible Customer Experience', desc: 'Customers combine funds across payment methods in one seamless flow.' },
+    { icon: Zap, title: 'API-First Infrastructure', desc: 'Integrates cleanly with the systems merchants and gateways already use.' },
+    { icon: Shield, title: 'Secure & Scalable', desc: 'Enterprise-grade orchestration built for high-volume commerce.' },
   ]
   return (
-    <section id="why" className="py-24 lg:py-32 bg-white">
+    <section id="why" className="py-24 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 mb-6">
             <span className="text-xs font-semibold text-amber-800 tracking-wide">WHY FINU</span>
           </div>
@@ -375,6 +317,39 @@ function WhyFinU() {
   )
 }
 
+function DesignedFor() {
+  const items = [
+    { icon: Store, label: 'Merchants' },
+    { icon: Network, label: 'Payment Gateways' },
+    { icon: Landmark, label: 'Financial Institutions' },
+    { icon: Briefcase, label: 'Enterprise Platforms' },
+  ]
+  return (
+    <section className="py-24 lg:py-28 bg-slate-50 border-y border-slate-200">
+      <div className="max-w-6xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 mb-6">
+            <span className="text-xs font-semibold text-slate-700 tracking-wide">DESIGNED FOR</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+            Built for the organisations that power digital commerce.
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {items.map((it, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center hover:border-amber-300 hover:shadow-md transition">
+              <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center mb-4">
+                <it.icon className="w-5 h-5 text-amber-400" />
+              </div>
+              <div className="text-sm font-semibold text-slate-900">{it.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Vision() {
   return (
     <section id="vision" className="py-24 lg:py-32 navy-bg text-white relative overflow-hidden">
@@ -388,14 +363,8 @@ function Vision() {
           Building the infrastructure behind <span className="gold-gradient">future digital payments</span>.
         </h2>
         <p className="mt-8 text-lg text-slate-300 leading-relaxed">
-          Split Payment Checkout is our first product. Our long-term vision is to build infrastructure that simplifies how businesses accept, route and optimize digital payments.
+          Our long-term vision is to build infrastructure that simplifies how businesses accept, route and optimise digital payments across India and beyond.
         </p>
-
-        <div className="mt-12 inline-flex items-center gap-3 px-5 py-3 rounded-full border border-amber-500/40 bg-amber-500/5">
-          <span className="w-2 h-2 rounded-full bg-amber-400 glow-pulse" />
-          <span className="text-sm font-semibold text-white">Product Under Active Development</span>
-          <span className="text-xs text-slate-400 hidden sm:inline">· Building with pilot merchants and payment partners</span>
-        </div>
       </div>
     </section>
   )
@@ -437,10 +406,10 @@ function Contact() {
             <span className="text-xs font-semibold text-amber-800 tracking-wide">CONTACT</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
-            Let's build the future of payments together.
+            Get in Touch
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            Merchants, payment partners, banks, and enterprise teams — reach out to explore how FinU can integrate with your stack.
+            For partnership, integration and enterprise inquiries, please reach out. We typically respond within 1–2 business days.
           </p>
 
           <div className="mt-10 space-y-5">
@@ -458,7 +427,7 @@ function Contact() {
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Headquarters</div>
+                <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Corporate Office</div>
                 <div className="text-slate-900 font-medium">Gorakhpur, Uttar Pradesh, India</div>
               </div>
             </div>
@@ -480,12 +449,11 @@ function Contact() {
           </div>
           <div>
             <Label htmlFor="message" className="text-slate-700">Message *</Label>
-            <Textarea id="message" rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="mt-1.5 bg-white" placeholder="Tell us about your use case, integration needs, or partnership interest." />
+            <Textarea id="message" rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="mt-1.5 bg-white" placeholder="Tell us about your use case or partnership interest." />
           </div>
           <Button type="submit" disabled={loading} className="w-full h-12 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold">
             {loading ? 'Sending...' : (<>Send Message <ArrowRight className="w-4 h-4 ml-1" /></>)}
           </Button>
-          <p className="text-xs text-slate-500 text-center pt-1">We typically respond within 1–2 business days.</p>
         </form>
       </div>
     </section>
@@ -500,15 +468,20 @@ function Footer() {
           <div className="md:col-span-2">
             <FinULogo variant="light" />
             <p className="mt-5 text-sm text-slate-400 max-w-sm leading-relaxed">
-              Building payment infrastructure for digital commerce. API-first orchestration technology for the next generation of Indian fintech.
+              FinU Technologies Private Limited — building payment infrastructure for digital commerce.
             </p>
-            <div className="mt-6 flex items-start gap-2 text-sm">
-              <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
-              <span>Gorakhpur, Uttar Pradesh, India</span>
-            </div>
-            <div className="mt-2 flex items-start gap-2 text-sm">
-              <Mail className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
-              <a href="mailto:info@finutechnologies.com" className="hover:text-white transition">info@finutechnologies.com</a>
+            <div className="mt-6 space-y-2 text-sm">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="text-slate-300 font-medium">Corporate Office – India</div>
+                  <div className="text-slate-500">Gorakhpur, Uttar Pradesh</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <Mail className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                <a href="mailto:info@finutechnologies.com" className="hover:text-white transition">info@finutechnologies.com</a>
+              </div>
             </div>
           </div>
           <div>
@@ -530,12 +503,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div>© 2026 FinU Technologies Private Limited. All rights reserved.</div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 glow-pulse" />
-            <span>Fintech Infrastructure · Product Under Development</span>
-          </div>
+        <div className="pt-8 text-xs text-slate-500 text-center">
+          © 2026 FinU Technologies Private Limited. All rights reserved.
         </div>
       </div>
     </footer>
@@ -547,10 +516,10 @@ export default function Page() {
     <main>
       <Nav />
       <Hero />
-      <TrustBar />
       <About />
       <Product />
       <WhyFinU />
+      <DesignedFor />
       <Vision />
       <Contact />
       <Footer />
