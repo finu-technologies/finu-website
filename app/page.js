@@ -231,23 +231,22 @@ function FeatureCard({ icon, title, desc }) {
 function FlowDiagram() {
   return (
     <div className="bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-lg shadow-slate-900/5">
-      <div className="grid md:grid-cols-5 gap-6 items-center">
+      <div className="text-center text-[10px] uppercase tracking-widest text-slate-500 font-semibold mb-6">FinU Orchestration Layer</div>
+
+      <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2">
         <FlowNode label="Customer" sub="initiates checkout" primary />
-
-        <div className="md:col-span-3 flex flex-col gap-3">
-          <div className="text-center text-[10px] uppercase tracking-widest text-slate-500 font-semibold">FinU Orchestration Layer</div>
-          <div className="flex items-stretch gap-2">
-            <MethodBadge icon={<CreditCard className="w-4 h-4" />} label="Card" step="1" />
-            <SeqConnector />
-            <MethodBadge icon={<Smartphone className="w-4 h-4" />} label="UPI" step="2" />
-            <SeqConnector />
-            <MethodBadge icon={<Building2 className="w-4 h-4" />} label="Net Banking" step="3" />
-          </div>
-          <div className="h-px shimmer-border" />
-          <div className="text-center text-[11px] text-slate-500">Sequential processing. Single merchant confirmation.</div>
-        </div>
-
+        <SeqConnector />
+        <MethodBadge icon={<CreditCard className="w-4 h-4" />} label="Card" step="1" />
+        <SeqConnector />
+        <MethodBadge icon={<Building2 className="w-4 h-4" />} label="Net Banking" step="2" />
+        <SeqConnector />
+        <MethodBadge icon={<Smartphone className="w-4 h-4" />} label="UPI" step="3" />
+        <SeqConnector />
         <FlowNode label="Merchant" sub="receives full settlement" primary />
+      </div>
+
+      <div className="mt-6 pt-5 border-t border-slate-100 text-center text-[11px] text-slate-500">
+        One transaction. Sequential processing. Single merchant confirmation.
       </div>
     </div>
   )
@@ -255,16 +254,16 @@ function FlowDiagram() {
 
 function FlowNode({ label, sub, primary }) {
   return (
-    <div className={`p-5 rounded-2xl text-center ${primary ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'}`}>
+    <div className={`flex-1 min-w-0 p-4 rounded-2xl text-center ${primary ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'}`}>
       <div className="text-sm font-semibold">{label}</div>
-      <div className={`text-xs mt-1 ${primary ? 'text-slate-400' : 'text-slate-500'}`}>{sub}</div>
+      <div className={`text-[11px] mt-1 ${primary ? 'text-slate-400' : 'text-slate-500'}`}>{sub}</div>
     </div>
   )
 }
 
 function MethodBadge({ icon, label, step }) {
   return (
-    <div className="relative flex-1 p-3 rounded-xl bg-amber-50 border border-amber-200 flex flex-col items-center gap-1 text-amber-900">
+    <div className="relative flex-1 min-w-0 p-4 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col items-center justify-center gap-1 text-amber-900">
       {step && (
         <span className="absolute top-1.5 right-2 text-[9px] font-mono text-amber-700/70">0{step}</span>
       )}
@@ -479,6 +478,7 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
           <div className="md:col-span-2">
             <FinULogo variant="light" />
+            <div className="mt-2 text-xs text-slate-500">FinU Technologies Private Limited</div>
             <p className="mt-5 text-sm text-slate-400 max-w-sm leading-relaxed">
               Payment infrastructure for India's digital commerce.
             </p>
