@@ -29,8 +29,7 @@ export default function LegalLayout({ title, updated, children }) {
         <div className="max-w-4xl mx-auto px-6 lg:px-10 py-8 text-sm text-slate-500">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>© 2026 FinU Technologies Private Limited</div>
-            <div className="flex flex-col md:flex-row gap-3 md:gap-6">
-              <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> Gorakhpur, Uttar Pradesh, India</span>
+            <div className="flex items-center gap-3">
               <a href="mailto:info@finutechnologies.com" className="flex items-center gap-1.5 hover:text-slate-900"><Mail className="w-3.5 h-3.5" /> info@finutechnologies.com</a>
             </div>
           </div>

@@ -38,7 +38,7 @@ export default function Privacy() {
       <p>Our website may use essential cookies for functionality and anonymous analytics. You can control cookies through your browser settings.</p>
 
       <h2>8. Contact</h2>
-      <p>Questions regarding this Privacy Policy may be directed to <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a>. FinU Technologies Private Limited is headquartered in Gorakhpur, Uttar Pradesh, India.</p>
+      <p>Questions regarding this Privacy Policy may be directed to <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a>.</p>
 
       <h2>9. Updates</h2>
       <p>We may update this policy periodically. Material changes will be reflected on this page with a revised "Last updated" date.</p>

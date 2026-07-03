@@ -29,7 +29,7 @@ export default function Terms() {
       <p>The website may reference third-party services or partners. FinU is not responsible for the content, policies, or practices of any third parties.</p>
 
       <h2>8. Governing Law</h2>
-      <p>These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of the courts at Gorakhpur, Uttar Pradesh, India.</p>
+      <p>These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of the competent courts in India.</p>
 
       <h2>9. Contact</h2>
       <p>Questions about these Terms may be directed to <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a>.</p>

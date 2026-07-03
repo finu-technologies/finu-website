@@ -21,7 +21,7 @@ export default function Refund() {
       <p>In the unlikely event a payment is made to FinU in error, please contact <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a> with transaction details. Verified erroneous payments will be reversed to the originating account, subject to applicable banking timelines and verification requirements.</p>
 
       <h2>6. Contact</h2>
-      <p>For any refund-related queries, please write to <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a>. FinU Technologies Private Limited is headquartered in Gorakhpur, Uttar Pradesh, India.</p>
+      <p>For any refund-related queries, please write to <a href="mailto:info@finutechnologies.com">info@finutechnologies.com</a>.</p>
     </LegalLayout>
   )
 }

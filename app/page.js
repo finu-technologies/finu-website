@@ -91,11 +91,11 @@ function Hero() {
               </a>
             </div>
             <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-widest text-slate-500">
-              <span>API-First</span>
+              <span>Built for Merchants</span>
               <span className="w-1 h-1 rounded-full bg-slate-600" />
-              <span>Enterprise Grade</span>
+              <span>Payment Partners</span>
               <span className="w-1 h-1 rounded-full bg-slate-600" />
-              <span>Made in India</span>
+              <span>Enterprise Commerce</span>
             </div>
           </div>
 
@@ -189,10 +189,10 @@ function Product() {
             <span className="text-xs font-semibold text-amber-400 tracking-wide">FLAGSHIP PRODUCT</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
-            Split Payment Checkout <span className="gold-gradient">Infrastructure</span>
+            Split Payment <span className="gold-gradient">Infrastructure</span>
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            Enable customers to complete a single online purchase using multiple payment methods such as Card + UPI, two cards, or other supported combinations — with merchants receiving one unified confirmation.
+            Let customers complete a single purchase using multiple payment methods — while merchants receive one unified confirmation.
           </p>
         </div>
 
@@ -202,17 +202,17 @@ function Product() {
           <FeatureCard
             icon={<Layers className="w-5 h-5" />}
             title="Multiple Payment Methods"
-            desc="Combine card, UPI, net banking and other supported methods in a single checkout flow."
+            desc="Combine card, UPI, net banking and other methods in one checkout."
           />
           <FeatureCard
             icon={<CheckCircle2 className="w-5 h-5" />}
             title="Unified Merchant Confirmation"
-            desc="One transaction result, one settlement view — regardless of how the customer paid."
+            desc="One transaction, one settlement view — regardless of how the customer paid."
           />
           <FeatureCard
             icon={<Zap className="w-5 h-5" />}
             title="API-First Integration"
-            desc="Sits alongside existing gateways and checkout systems, without replacing them."
+            desc="Works alongside existing gateways and checkout systems."
           />
         </div>
 
@@ -363,7 +363,7 @@ function Vision() {
           Building the infrastructure behind <span className="gold-gradient">future digital payments</span>.
         </h2>
         <p className="mt-8 text-lg text-slate-300 leading-relaxed">
-          Our long-term vision is to build infrastructure that simplifies how businesses accept, route and optimise digital payments across India and beyond.
+          Our long-term vision is to build payment infrastructure that makes digital commerce more flexible, reliable and intelligent. Split Payment Infrastructure is the first step toward a broader suite of payment infrastructure solutions.
         </p>
       </div>
     </section>
@@ -440,7 +440,7 @@ function Contact() {
           </div>
           <div>
             <Label htmlFor="message" className="text-slate-700">Message *</Label>
-            <Textarea id="message" rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="mt-1.5 bg-white" placeholder="Tell us about your use case or partnership interest." />
+            <Textarea id="message" rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="mt-1.5 bg-white" placeholder="Tell us how we can help." />
           </div>
           <Button type="submit" disabled={loading} className="w-full h-12 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold">
             {loading ? 'Sending...' : (<>Send Message <ArrowRight className="w-4 h-4 ml-1" /></>)}
@@ -462,13 +462,6 @@ function Footer() {
               FinU Technologies Private Limited — building payment infrastructure for digital commerce.
             </p>
             <div className="mt-6 space-y-2 text-sm">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-slate-300 font-medium">Corporate Office – India</div>
-                  <div className="text-slate-500">Gorakhpur, Uttar Pradesh</div>
-                </div>
-              </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@finutechnologies.com" className="hover:text-white transition">info@finutechnologies.com</a>
