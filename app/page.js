@@ -422,15 +422,6 @@ function Contact() {
                 <a href="mailto:info@finutechnologies.com" className="text-slate-900 font-medium hover:text-amber-700">info@finutechnologies.com</a>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Corporate Office</div>
-                <div className="text-slate-900 font-medium">Gorakhpur, Uttar Pradesh, India</div>
-              </div>
-            </div>
           </div>
         </div>
 
