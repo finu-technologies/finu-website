@@ -429,7 +429,7 @@ function Contact() {
             Get in Touch
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            For partnership, integration and enterprise inquiries, please reach out. We typically respond within 1–2 business days.
+            Whether you're exploring a potential use case or partnership, or simply want to learn more about FinU Technologies, we'd love to hear from you.
           </p>
 
           <div className="mt-10 space-y-5">
